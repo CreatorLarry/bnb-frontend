@@ -190,6 +190,81 @@ body {
 }
 
 
+.featured-destinations {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.featured-destinations h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.destination-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-row {
+    display: flex;
+    gap: 20px;
+}
+
+.grid-row.large-row .destination-card {
+    flex: 1;
+    height: 250px;
+}
+
+.grid-row.small-row .destination-card {
+    flex: 1;
+    height: 180px;
+}
+
+.destination-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.destination-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.destination-overlay {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .grid-row {
+        flex-direction: column;
+    }
+
+    .grid-row .destination-card {
+        height: 180px !important;
+    }
+}
+
+
 .bnb-listings {
     background: #fff;
     padding: 80px 20px 60px;
@@ -257,4 +332,278 @@ body {
     font-size: 1rem;
     font-weight: 600;
     color: #003580;
+}
+
+.explore-categories {
+    padding: 70px 20px;
+    background: #f7f9fc;
+    text-align: center;
+}
+
+.explore-categories h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    filter: brightness(0.75);
+}
+
+.category-card span {
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.category-card:hover {
+    transform: scale(1.03);
+}
+
+.promo-banner {
+    background: #fdf6e3;
+    padding: 60px 20px;
+}
+
+.promo-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.promo-text {
+    flex: 1 1 400px;
+}
+
+.promo-text h2 {
+    font-size: 2rem;
+    color: #d35400;
+    margin-bottom: 15px;
+}
+
+.promo-text p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn-book {
+    display: inline-block;
+    background: #0071c2;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-book:hover {
+    background: #005a9e;
+}
+
+.promo-image {
+    flex: 1 1 300px;
+}
+
+.promo-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .promo-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promo-text h2 {
+        font-size: 1.6rem;
+    }
+}
+
+
+.final-cta {
+    background: linear-gradient(to right, #0071c2, #005a9e);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.final-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.final-cta p {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    color: #e0f1ff;
+}
+
+.cta-button {
+    background: #fdd835;
+    color: #222;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #fbc02d;
+}
+
+@media (max-width: 768px) {
+    .final-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 10px 22px;
+    }
+}
+
+.why-us {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.why-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+}
+
+.why-card i {
+    font-size: 40px;
+    color: var(--highlight-yellow, #fdd835);
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #0071c2;
+}
+
+.why-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+.site-footer {
+    background: #001f3f;
+    color: white;
+    padding: 60px 20px 20px;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.footer-brand h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--highlight-yellow, #fdd835);
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: var(--highlight-yellow);
 }
