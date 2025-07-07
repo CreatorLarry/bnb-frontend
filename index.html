@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BNBHub – Find Your Stay</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="top-navbar">
+        <div class="nav-container">
+            <div class="logo">BNBHub</div>
+            <!-- <ul class="nav-links">
+                <li><a href="#"><span>🏡</span> BnBs</a></li>
+                <li><a href="#"><span>📍</span> Locations</a></li>
+                <li><a href="#"><span>💬</span> Reviews</a></li>
+                <li><a href="#"><span>📣</span> Host</a></li>
+            </ul> -->
+            <ul class="nav-actions">
+                <!-- <li><a href="#">KES</a></li>
+                <li><a href="#">🇬🇧</a></li> -->
+                <li><a href="#" class="outline">Register</a></li>
+                <li><a href="#" class="outline">Sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-inner">
+            <h1>Find your perfect BnB</h1>
+            <p>Book unique stays hosted by locals across Kenya and beyond.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <form class="search-bar">
+            <!-- Location -->
+            <div class="search-item">
+                <label>📍</label>
+                <input type="text" placeholder="Where are you going?" list="locations">
+                <datalist id="locations">
+                    <option value="Nairobi">
+                    <option value="Diani">
+                    <option value="Naivasha">
+                    <option value="Nakuru">
+                    <option value="Mombasa">
+                </datalist>
+            </div>
+
+            <!-- Date -->
+            <div class="search-item">
+                <label>📅</label>
+                <input type="text" id="dateInput" placeholder="Select dates">
+            </div>
+
+            <!-- Guests -->
+            <div class="search-item guests-dropdown-wrapper">
+                <label>👤</label>
+                <input type="text" id="guestsInput" readonly placeholder="Guests & Rooms">
+                <div class="guests-panel" id="guestsPanel">
+                    <div class="guest-row">
+                        <span>Adults</span>
+                        <div class="counter">
+                            <button type="button" class="minus">-</button>
+                            <span data-type="adults">2</span>
+                            <button type="button" class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="guest-row">
+                        <span>Children</span>
+                        <div class="counter">
+                            <button type="button" class="minus">-</button>
+                            <span data-type="children">0</span>
+                            <button type="button" class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="guest-row">
+                        <span>Rooms</span>
+                        <div class="counter">
+                            <button type="button" class="minus">-</button>
+                            <span data-type="rooms">1</span>
+                            <button type="button" class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </header>
+
+
+    <!-- BnB Listings -->
+    <section class="bnb-listings">
+        <div class="container">
+            <h2>Popular BnBs near you</h2>
+            <div class="cards">
+                <!-- Card 1 -->
+                <div class="bnb-card">
+                    <img src="images/bnb1.jpg" alt="BnB in Nairobi">
+                    <div class="bnb-info">
+                        <h3>Modern Loft in Nairobi</h3>
+                        <p class="location">📍 Westlands, Nairobi</p>
+                        <p class="rating">⭐ 4.8 (120 reviews)</p>
+                        <p class="price">KES 4,500/night</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bnb-card">
+                    <img src="images/bnb2.jpg" alt="BnB in Diani">
+                    <div class="bnb-info">
+                        <h3>Beachside Villa</h3>
+                        <p class="location">📍 Diani Beach</p>
+                        <p class="rating">⭐ 4.9 (89 reviews)</p>
+                        <p class="price">KES 7,800/night</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bnb-card">
+                    <img src="images/bnb3.jpg" alt="BnB in Naivasha">
+                    <div class="bnb-info">
+                        <h3>Lakeview Cabin</h3>
+                        <p class="location">📍 Naivasha</p>
+                        <p class="rating">⭐ 4.7 (64 reviews)</p>
+                        <p class="price">KES 6,200/night</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>
